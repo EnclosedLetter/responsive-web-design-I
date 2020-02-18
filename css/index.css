@@ -134,13 +134,23 @@ header img{
 }
 .content{
     
-    display: flex;
+    /* display: flex; */
     /* flex-direction: column; */
-    flex-flow: wrap;
+    /* flex-flow: wrap; */
     /* justify-content: center; */
     /* display: inline;
     position: relative; */
 }
+
+.top{
+    display: flex;
+}
+
+.bottom{
+    display: flex;
+}
+
+
 .contentCard1, .contentCard2{
     width: 48%;
     /* display: inline-block; */
@@ -192,10 +202,13 @@ address{
         display: flex;
     }
 
+    .bottom{
+        display: flex;
+    }
     /* .content{
         display: flex;
-        flex-flow: wrap; */
-    }
+        flex-flow: wrap; 
+    }*/
 
     /* body header{
         display: flex;
@@ -210,10 +223,10 @@ address{
         /* margin: 0 25%; */
     }  
 
-    .content{
+    /* .content{
         display: flex;
-        /* flex-flow: wrap; */
-    }
+        flex-flow: wrap;
+    } */
 
 
 
