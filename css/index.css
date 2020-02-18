@@ -68,7 +68,7 @@ body{
 }
 header{
     position: fixed;
-    display: block;
+    display: flex;
     width: 70%;
     height: 8%;
     background-color: white;
@@ -102,28 +102,30 @@ header img{
 .CTASection{
     padding: 4% 3%;
     margin: 6% 0px;
-    position: relative;
+    /* position: relative; */
     width: 100%;
     margin-bottom: 10%;
+    display: flex;
+    justify-content: space-around;
 }
 .CTASection img{
-    position: absolute;
-    bottom: -6%;
-    left: 55%;
+    /* position: absolute; */
+    /* bottom: -6%; */
+    /* left: 55%; */
 }
 .CTA{
     font-size: 80px;
     text-align: center;
-    position: relative;
+    /* position: relative; */
     right: 23%;
     margin-top: 60px;
 }
 .CTASection button{
-    width: 13%;
+    width: 50%;
     padding: 1% 0px;
     color: grey;
     background-color: white;
-    position: absolute;
+    /* position: absolute; */
     left: 45%;
 }
 .CTASection button:hover{
@@ -131,31 +133,38 @@ header img{
     background-color: grey;
 }
 .content{
-    display: inline-block;
-    position: relative;
+    
+    display: flex;
+    /* flex-direction: column; */
+    flex-flow: wrap;
+    /* justify-content: center; */
+    /* display: inline;
+    position: relative; */
 }
 .contentCard1, .contentCard2{
     width: 48%;
-    display: inline-block;
+    /* display: inline-block; */
     margin: 4% 7px;
 }
 .contentCard3, .contentCard4, .contentCard5{
+    /* display: flex; */
+    /* justify-content: space-evenly; */
     width: 32%;
-    display: inline-block;
+    /* display: inline-block; */
     margin: 4% 4px;
 }
 .middle-img {
     width: 100%;
 }
 footer{
-    display: inline-block;
-    position: relative;
+    /* display: inline-block; */
+    /* position: relative; */
     width: 100%;
     margin: 3% 0;
     line-height: 2;
 }
 address{
-    margin-top: -16px;
+    /* margin-top: -16px; */
 }
 .copyright{
     margin-top: 3%;
@@ -163,4 +172,60 @@ address{
 }
 .contact{
     line-height: 2;
+}
+
+/* Tablet Version */
+
+@media (max-width: 800px){
+    body{
+        background-color: aqua;
+        /* display: flex; */
+        /* flex-flow: column-reverse; */
+
+        /* width: 100%; */
+    }
+    #pic{
+        display: none;
+    }
+
+    .top{
+        display: flex;
+    }
+
+    /* .content{
+        display: flex;
+        flex-flow: wrap; */
+    }
+
+    /* body header{
+        display: flex;
+        flex-direction: column-reverse;
+    } */
+    .CTA{
+        /* display: flex; */
+        /* justify-content: center; */
+        /* align-content: right; */
+        /* align-items: center; */
+        /* width: 100%; */
+        /* margin: 0 25%; */
+    }  
+
+    .content{
+        display: flex;
+        /* flex-flow: wrap; */
+    }
+
+
+
+
+}
+
+/* Phone Version */
+
+@media (max-width: 500px){
+    body{
+
+        background-color: purple;
+
+    }
 }
