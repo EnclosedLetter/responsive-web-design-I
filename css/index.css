@@ -237,7 +237,21 @@ address{
 
     }
 
+}
 
+/* Phone */
 
+@media(max-width: 500px){
+    body{
+        background-color: palegreen;
+    }
+
+    .CTASection{
+        flex: display;
+        /* justify-content: center; */
+        /* width: 100%; */
+        border: 1px solid blue;
+        margin: 10% 5%;
+    }
 
 }
