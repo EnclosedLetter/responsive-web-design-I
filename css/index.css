@@ -68,9 +68,9 @@ body{
 }
 header{
     display: flex;
-    position: fixed;
+    /* position: fixed; */
     /* display: block; */
-    width: 70%;
+    width: 100%;
     height: 8%;
     background-color: white;
     /* top: 5% 0 0 0; */
@@ -173,8 +173,11 @@ address{
 /* Tablet */
 
 @media(max-width: 900px){
+    
+    /* Do I have to add 100% width to this everytime? */
     body{
         background-color: orangered;
+        /* width: 100%; */
     }
 
     .content{
@@ -207,6 +210,7 @@ address{
     
     #iimg{
         display: none;
+        
     }
 
     /*Why do I have to add margin to the left to make it align? It seems like the box is still saying there is 
