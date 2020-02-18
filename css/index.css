@@ -162,23 +162,25 @@ header a:hover{
     width:65%;
     display:flex;
     justify-content:center;
-    
+    align-items: center;
     /* Shouldn't this make the Title and the button flex into a column? */
-    /* flex-direction: column; */
-    /* font-size: 80px; */
-    /* text-align: center; */
+    flex-flow: column;
+    border: 1px solid black;
+    font-size: 80px;
+    text-align: center;
     /* position: relative; */
     /* right: 23%; */
     /* margin-top: 60px; */
 }
 .CTASection button{
-    
-    width: 13%;
+    /* justify-content:center; */
+    /* align-items: center; */
+    width: 40%;
     padding: 1% 0px;
     color: grey;
     background-color: white;
-    position: absolute;
-    left: 45%;
+    /* position: absolute; */
+    /* left: 45%; */
 }
 .CTASection button:hover{
     color: white;
@@ -193,10 +195,11 @@ header a:hover{
 
 /* This class is given to the top section and the bottom section */
 /* Why isn't this putting space around the top and bottom? */
+/* Would it be better if I gave each section their own div? */
 .wrapper{
     display:flex;
     justify-content:space-around;
-    margin: 2% 5%;
+    margin: 2% 0;
 }
 
 
@@ -232,11 +235,16 @@ header a:hover{
     position: relative; */
     display: flex;
     flex-direction: column;
-    width: 25%;
+    width: 20%;
     /* margin: 3% 0; */
     line-height: 2;
     /* color: purple; */
+    text-decoration: none;
 }
+#contact a{
+text-decoration: none;
+}
+
 address{
     margin-top: -16px;
 }
@@ -244,6 +252,74 @@ address{
     margin-top: 3%;
     text-align: center;
 }
-/* .contact{
-    line-height: 2;
-} */
+footer{
+    margin:2% 0;
+}
+
+/*media queries here*/
+/* Tablet */
+@media (max-width: 800px){
+    body{
+        /* background-color: purple; */
+    }
+    nav{
+      flex-direction:column-reverse;
+      align-items:center;
+    }
+    .links{
+      width:100%;
+    }
+    .logo{
+      margin:2% 0;
+    }
+    .CTASection{
+      justify-content:center;
+    }
+    .ctaImg{
+      display:none;
+    }
+    footer{
+      text-align:center;
+    }
+  }
+/* Phone */
+  @media (max-width: 500px){
+    body{
+        /* background-color: blue; */
+    }
+    
+    h1{
+      font-size:4rem;
+    }
+    nav{
+      flex-direction:column-reverse;
+      align-items:center;
+    }
+    .links{
+      flex-direction:column;
+    }
+
+    contentCard1, .contentCard2, .contentCard3, .contentCard4, .contentCard5{
+        margin:5% 0;
+    }
+
+    .cta{
+      flex-direction:column-reverse;
+      align-items:center;
+    }
+    .wrapper{
+      flex-direction:column;
+      /* How do you add spacing between the items that are flexed if they are in columns? */
+      /* margin: 25% 25%; */
+    }
+    .two, .three{
+      width:100%;
+    }
+    #contact{
+      text-align:center;
+    }
+    footer{
+      text-align:center;
+    }
+  }
+
