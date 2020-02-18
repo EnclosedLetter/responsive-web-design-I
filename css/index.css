@@ -46,8 +46,11 @@ table {
     border-spacing: 0;
 }
 /* Set every element's box-sizing to border-box */
+/* Do we always set the width to 100% at the start? */
 * {
     box-sizing: border-box;
+    /* When I add this, it changes everything, why is that? */
+    /* width: 100%; */
 }
 html, body {
     height: 100%;
@@ -61,24 +64,22 @@ h1, h2, h3, h4, h5 {
 /* Your code starts here! */
 * {
     border: 2px solid grey;
+
 }
 body{
     margin: 0% 15%;
     background-color: white;
 }
 header{
-    display: flex;
-    /* position: fixed; */
-    /* display: block; */
-    width: 100%;
+    position: fixed;
+    display: block;
+    width: 70%;
     height: 8%;
     background-color: white;
-    /* top: 5% 0 0 0; */
+    top: 0;
     z-index: 1;
 }
 header nav{
-    display: flex;
-    
     width: 75%;
     text-align: center;
     align-items: center;
@@ -98,9 +99,8 @@ header a:hover{
     color: black;
 }
 header img{
-    /* display: flex; */
-    /* position: absolute; */
-    top: 50%;
+    position: absolute;
+    top: 10%;
     left: 76%;
 }
 .CTASection{
@@ -109,7 +109,6 @@ header img{
     position: relative;
     width: 100%;
     margin-bottom: 10%;
-    border: 1px solid black;
 }
 .CTASection img{
     position: absolute;
@@ -168,90 +167,4 @@ address{
 }
 .contact{
     line-height: 2;
-}
-
-/* Tablet */
-
-@media(max-width: 900px){
-    
-    /* Do I have to add 100% width to this everytime? */
-    body{
-        background-color: orangered;
-        /* width: 100%; */
-    }
-
-    .content{
-        display: flex;
-        justify-content: space-between;
-        flex-flow: wrap;
-
-    }
-
-    nav{
-        display: flex;
-        justify-content: center;
-        /* flex-direction: column-reverse; */
-        width: 100%;
-        margin: 0 0 0 25%;
-    }
-    /* Why can't I target this by saying nav img? */
-    /* not the intended way to do it, is this because the img needs more space?*/
-    #img1{
-        /* padding: 5% 5%; */
-        /* align-items: center; */
-        align-content: center;
-        /* text-align: center; */
-        border: 1px solid blue;
-        margin: 5px 200px 25px -35%;
-        /* width: 100% */
-
-    }
-    
-    
-    #iimg{
-        display: none;
-        
-    }
-
-    /*Why do I have to add margin to the left to make it align? It seems like the box is still saying there is 
-    a pic there, that's why it's so big but I made it dissapear above.*/
-    .CTASection {      
-        /* display: flex; */
-        margin: 5% 0 5% 25%;
-        justify-content: center;
-        /* align-items: center; */
-        /* align-content: center; */
-        width: 100%;
-    }
-
-
-
-    .top{
-        display: flex;
-        justify-content: space-between;
-    }
-   
-   
-    .contentCard1, .contentCard2, {
-        /* width: 48%; */
-
-    }
-
-}
-
-/* Phone */
-
-@media(max-width: 500px){
-    body{
-        background-color: palegreen;
-    }
-
-    .CTASection{
-        flex: display;
-        /* justify-content: center; */
-        /* width: 100%; */
-        border: 1px solid blue;
-        margin: 10% 5%;
-    }
-
 }
